@@ -1,0 +1,7 @@
+com\example\entity\HibernateUtil.class
+com\example\entity\CourseRegistration.class
+com\example\entity\CourseRating.class
+com\example\entity\Student.class
+com\example\App.class
+com\example\entity\Course.class
+com\example\entity\CourseRatingKey.class

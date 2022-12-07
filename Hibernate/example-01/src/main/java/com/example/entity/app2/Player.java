@@ -1,0 +1,54 @@
+package com.example.entity.app2;
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+
+@Entity
+public class Player {
+    @Id
+    private Long id;
+
+    private String name;
+
+    @ManyToOne
+    private Game game;
+
+    public Player() {
+    }
+
+    public Player(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    @Override
+    public String toString() {
+        return "Player [id=" + id + ", name=" + name + ", game=" + game + "]";
+    }
+}

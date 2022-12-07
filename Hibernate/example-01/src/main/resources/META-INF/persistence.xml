@@ -1,0 +1,26 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+                      http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+
+    <persistence-unit name="h2DB" transaction-type="RESOURCE_LOCAL">
+        <class>com.example.entity.app1.Student</class>
+        <class>com.example.entity.app2.Game</class>
+        <class>com.example.entity.app2.Player</class>
+        <class>com.example.entity.app3.Account</class>
+        <class>com.example.entity.app3.AccountId</class>
+        <class>com.example.entity.app3.Book</class>
+        <class>com.example.entity.app3.BookId</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
+            <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:h2DB" />
+            <property name="javax.persistence.jdbc.user" value="sa" />
+            <property name="javax.persistence.jdbc.password" value="" />
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="create-drop" />
+            <property name="show_sql" value="true"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+        </properties>
+    </persistence-unit>
+</persistence>
